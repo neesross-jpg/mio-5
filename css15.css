@@ -1,0 +1,303 @@
+@-webkit-keyframes ipswich-login-input-animated {
+	0% {
+		border: 1px solid #bbb;
+		background: 0 0;
+		border-left: 3px solid #018765
+	}
+
+	100% {
+		border: 1px solid #999;
+		background: #f2f6f6;
+		border-left: 3px solid #018765
+	}
+}
+
+@keyframes ipswich-login-input-animated {
+	0% {
+		border: 1px solid #bbb;
+		background: 0 0;
+		border-left: 3px solid #018765
+	}
+
+	100% {
+		border: 1px solid #999;
+		background: #f2f6f6;
+		border-left: 3px solid #018765
+	}
+}
+
+@-webkit-keyframes ipswich-login-input-line-animated {
+	0% {
+		border: 1px solid #bbb;
+		border-left: 3px solid #018765
+	}
+
+	100% {
+		border: 1px solid #999;
+		border-left: 3px solid #018765
+	}
+}
+
+@keyframes ipswich-login-input-line-animated {
+	0% {
+		border: 1px solid #bbb;
+		border-left: 3px solid #018765
+	}
+
+	100% {
+		border: 1px solid #999;
+		border-left: 3px solid #018765
+	}
+}
+
+@media only screen and (max-width:479px) and (min-width:320px) {
+	.ipswich-main-buttons-link[_ngcontent-c36] {
+		width: 125px
+	}
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] {
+	margin: 25px 45px 45px
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-image[_ngcontent-c36] {
+	text-align: center;
+	margin: 0 auto
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-image[_ngcontent-c36] .sefue-content-image-preview[_ngcontent-c36] {
+	width: 66px;
+	display: inline-block;
+	vertical-align: middle
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-image[_ngcontent-c36] .sefue-content-image-welcome[_ngcontent-c36] {
+	text-align: center;
+	padding: 6px 0 22px
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-image[_ngcontent-c36] .sefue-content-image-welcome[_ngcontent-c36] .sefue-content-image-welcome-text[_ngcontent-c36] {
+	color: #00583c;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-image[_ngcontent-c36] .sefue-content-image-welcome[_ngcontent-c36] .sefue-content-image-welcome-name[_ngcontent-c36] {
+	color: #00583c;
+	font-family: Helvetica;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] {
+	margin: 0 auto;
+	width: calc(100% - 90px);
+	position: relative
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] i[_ngcontent-c36] {
+	font-size: 18px;
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	top: 13px;
+	left: 14px;
+	color: #d0d0d0
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] i[_ngcontent-c36]+.sefue-content-data-input[_ngcontent-c36] {
+	padding-left: 40px;
+	padding-right: 44px
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-pass[_ngcontent-c36] {
+	display: block;
+	position: absolute;
+	top: 9px;
+	right: 12px;
+	cursor: pointer
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-pass[_ngcontent-c36] .sefue-content-data-pass-active[_ngcontent-c36],
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-pass[_ngcontent-c36] .sefue-content-data-pass-disable[_ngcontent-c36] {
+	font-size: 24px;
+	position: relative;
+	left: 0;
+	top: 1px;
+	color: #7e7b7b
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-input[_ngcontent-c36] {
+	height: 44px;
+	width: 100%;
+	padding: 0 14px;
+	font-size: 16px;
+	color: #333;
+	border: 1px solid #bbb;
+	background: #fff
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-input[_ngcontent-c36]:focus {
+	outline: 0
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-input.required[_ngcontent-c36] {
+	border-left: 3px solid #018765
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-input[type=text][_ngcontent-c36]+.sefue-content-data-pass[_ngcontent-c36] .sefue-content-data-pass-active[_ngcontent-c36] {
+	display: none
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-input[type=password][_ngcontent-c36]+.sefue-content-data-pass[_ngcontent-c36] .sefue-content-data-pass-active[_ngcontent-c36],
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-input[type=text][_ngcontent-c36]+.sefue-content-data-pass[_ngcontent-c36] .sefue-content-data-pass-disable[_ngcontent-c36] {
+	display: inline-block
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] .sefue-content-data-input[type=password][_ngcontent-c36]+.sefue-content-data-pass[_ngcontent-c36] .sefue-content-data-pass-disable[_ngcontent-c36] {
+	display: none
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-keyboard[_ngcontent-c36] {
+	margin: 0 auto;
+	width: calc(100% - 90px);
+	text-align: right;
+	padding: 8px 6px;
+	position: relative
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-keyboard[_ngcontent-c36] .sefue-content-keyboard-link[_ngcontent-c36] {
+	display: inline-block;
+	cursor: pointer;
+	color: #018765;
+	font-size: 12px
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-keyboard[_ngcontent-c36] .sefue-content-keyboard-link[_ngcontent-c36]:hover {
+	text-decoration: underline;
+	color: #8ac8b8
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-keyboard[_ngcontent-c36] .sefue-messages[_ngcontent-c36] {
+	margin: -8px 8px 0
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-register[_ngcontent-c36] {
+	text-align: center;
+	padding: 40px 0
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-register[_ngcontent-c36] .sefue-content-register-title[_ngcontent-c36] {
+	font-size: 14px;
+	display: block;
+	color: #333
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-register[_ngcontent-c36] .sefue-content-register-link[_ngcontent-c36] {
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #018765;
+	text-decoration: none;
+	cursor: pointer
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-register[_ngcontent-c36] .sefue-content-register-link[_ngcontent-c36]:hover {
+	text-decoration: underline;
+	color: #8ac8b8
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-button[_ngcontent-c36] {
+	padding-top: 36px
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-button[_ngcontent-c36] .sefue-content-button-table[_ngcontent-c36] {
+	display: table;
+	width: 100%
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-button[_ngcontent-c36] .sefue-content-button-table[_ngcontent-c36] .sefue-content-button-table-left[_ngcontent-c36],
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-button[_ngcontent-c36] .sefue-content-button-table[_ngcontent-c36] .sefue-content-button-table-right[_ngcontent-c36] {
+	display: table-cell;
+	vertical-align: middle;
+	width: 50%
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-button[_ngcontent-c36] .sefue-content-button-table[_ngcontent-c36] .sefue-content-button-table-left[_ngcontent-c36] {
+	text-align: left
+}
+
+.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-button[_ngcontent-c36] .sefue-content-button-table[_ngcontent-c36] .sefue-content-button-table-right[_ngcontent-c36] {
+	text-align: right
+}
+
+.sefue[_ngcontent-c36] .sefue-messages[_ngcontent-c36] {
+	text-align: left
+}
+
+.sefue[_ngcontent-c36] .sefue-messages[_ngcontent-c36] .sefue-error-message[_ngcontent-c36] {
+	color: #eb3236;
+	display: block;
+	padding: 5px 0;
+	font-size: 12px
+}
+
+.sefue[_ngcontent-c36] .sefue-messages[_ngcontent-c36] span[_ngcontent-c36]:empty {
+	display: none
+}
+
+.sefue.stepPasswordMode[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] i[_ngcontent-c36] {
+	font-size: 24px;
+	top: 9px
+}
+
+.sefue.stepPasswordMode[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36] i[_ngcontent-c36]+.sefue-content-data-input[_ngcontent-c36] {
+	padding-left: 50px;
+	padding-right: 46px
+}
+
+.sefue.stepPasswordMode[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-register[_ngcontent-c36] {
+	padding: 16px 0 0
+}
+
+.sefue.stepPasswordMode[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-register[_ngcontent-c36] .sefue-content-register-if[_ngcontent-c36]+.sefue-content-register-if[_ngcontent-c36] {
+	margin-top: 4px
+}
+
+.sefue.stepPasswordMode[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-button[_ngcontent-c36] {
+	padding-top: 30px
+}
+
+.sefue.stepPasswordMode[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-keyboard[_ngcontent-c36] {
+	padding-top: 14px
+}
+
+@media only screen and (max-width:639px) and (min-width:320px) {
+	.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] {
+		margin: 25px 20px 45px
+	}
+
+	.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-data[_ngcontent-c36],
+	.sefue[_ngcontent-c36] .sefue-content[_ngcontent-c36] .sefue-content-keyboard[_ngcontent-c36] {
+		width: 100%
+	}
+}
+
+.sefue-content-register[_ngcontent-c36] {
+	text-align: center;
+	padding: 40px 0
+}
+
+.sefue-content-keyboard[_ngcontent-c36] .sefue-content-keyboard-link[_ngcontent-c36]:hover,
+.sefue-content-register-link[_ngcontent-c36]:hover {
+	color: #00583c !important
+}
+
+.loginPasswordContextualInfo[_ngcontent-c36] {
+	font-size: 11px;
+	padding: 20px 0 10px 10px;
+	line-height: 1.5;
+	text-align: left
+}

